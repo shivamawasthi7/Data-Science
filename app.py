@@ -35,6 +35,30 @@ def recommend(movie):
     return recommended_movie_names, recommended_movie_posters
 
 st.header('🎬 Movie Recommender System')
+st.markdown(
+    """
+    <style>
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f0f0f5;
+        color: #333;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        font-family: 'Segoe UI', sans-serif;
+        box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+
+    <div class="footer">
+        Developed by <b>Kartik Tiwari</b> 🚀
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 movies_dict = pickle.load(open('movie_list.pkl', 'rb'))
